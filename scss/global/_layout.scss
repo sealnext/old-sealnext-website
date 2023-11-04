@@ -1,6 +1,7 @@
 @import '../shared/variables';
 
-.page {
+// take whole height of viewport
+.full-height {
   height: 100vh;
 }
 
@@ -13,12 +14,13 @@
     grid-template-columns: repeat(8, 1fr);
   }
 
-  @include mq(tablet) {
+  @include mq(desktop) {
     grid-template-columns: repeat(12, 1fr);
     column-gap: 32px;
   }
 }
 
+// centered shit which doesn't exceed 1120px
 .container {
   width: calc(100% - 32px); // 16px margin minimum
   max-width: $container-width;

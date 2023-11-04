@@ -1,0 +1,17 @@
+@import '../shared/variables';
+
+.hero {
+  &__header {
+    grid-column: span 4;
+
+    &__logo {
+      margin-top: $top-margin;
+    }
+  }
+
+  @include mq(tablet) {
+    &__header {
+      grid-column: span 2;
+    }
+  }
+}

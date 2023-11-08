@@ -1,9 +1,14 @@
+.menu_button {
+  mix-blend-mode: difference;
+}
+
 .menu_button__trigger_checkbox {
   display: none;
 }
 
 .menu_button__trigger_label {
   cursor: pointer;
+  position: fixed;
   display: inline-block;
   -webkit-tap-highlight-color: transparent;
   -webkit-focus-ring-color: transparent;

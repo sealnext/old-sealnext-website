@@ -6,12 +6,12 @@
     justify-content: center;
     grid-column: span 4;
 
-    &__logo {
-      max-height: 60%;
-    }
-
     @include mq(tablet) {
       justify-content: left;
+    }
+
+    &__logo {
+      max-height: 60%;
     }
   }
 
@@ -22,5 +22,13 @@
       grid-column: 1 / span 7;
       align-self: center;
     }
+  }
+
+  &__video {
+    &__container {
+      grid-column: span 5 / -1;
+    }
+    width: 100%;
+    aspect-ratio: 1 / 1;
   }
 }

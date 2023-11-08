@@ -1,3 +1,5 @@
+@use 'colors';
+
 html, body, button, ul, li, a {
   all: unset;
   display: revert;
@@ -15,6 +17,11 @@ html, body, button, ul, li, a {
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  overscroll-behavior: none;
+}
+
 body {
   overscroll-behavior: none;
+  background-color: colors.$dark-background-color;
 }

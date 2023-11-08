@@ -20,9 +20,30 @@
   }
 }
 
-// centered shit which doesn't exceed 1120px
+// centered container which doesn't exceed 1120px
 .container {
   width: calc(100% - 32px); // 16px margin minimum
   max-width: $container-width;
   margin: 0 auto;
+}
+
+/* PLEASE DO NOT CHANGE THIS */
+.screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Move elements to new row inside grid */
+.new-row {
+  grid-column: 1 / -1;
+}
+
+/* Generate utility classes for z-index */
+@for $i from 0 through 5 {
+  .z-#{5 * $i} {
+    position: relative;
+    z-index: #{5 * $i};
+  }
 }

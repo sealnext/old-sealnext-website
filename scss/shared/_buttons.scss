@@ -1,8 +1,151 @@
-.menu {
-  &__button {
-    width: 1rem;
-    height: 1rem;
-    position: fixed;
-    background-color: white;
+@import 'variables';
+
+button {
+  cursor: pointer;
+  line-height: 1;
+}
+
+.button {
+  @mixin hover($bg-color) {
+    &:hover {
+      background-color: lighten($bg-color, 2%);
+    }
   }
+
+  /* PLEASE DO NOT CHANGE THIS */
+  &__container {
+    @include main-buttons-container;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__getstarted {
+    $button-color: hsla(230, 90%, 60%, 0.9);
+
+    background-color: $button-color;
+
+    padding: 0 1em;
+    border-radius: $round-border;
+    font-weight: 500;
+    color: white;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3em;
+    font-size: 1.25rem;
+
+    @include hover($button-color);
+    @include mq(tablet) {
+      z-index: 0;
+    }
+
+    &__container {
+      width: 0.7em;
+      height: 0.7em;
+      position: relative;
+    }
+
+    &__icon {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      height: 100%;
+      width: 100%;
+
+      /* lines of + symbol */
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        height: 100%;
+        width: 15%;
+        background-color: white;
+      }
+
+      &::before {
+        transform: translateX(-50%);
+      }
+
+      &::after {
+        transform: translateX(-50%) rotate(90DEG);
+      }
+    }
+  }
+
+  &__menu {
+    @mixin button-box {
+      height: 100%;
+      aspect-ratio: 1/1;
+    }
+
+    $button-color: hsla(225, 10%, 30%, 0.9);
+
+    @include hover($button-color);
+    @include button-box;
+    background-color: $button-color;
+    border-radius: 100%;
+    position: relative;
+
+
+    &__placeholder {
+      @include button-box;
+      margin-left: 1em;
+    }
+
+    &__container {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      width: 50%;
+      height: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__icon {
+      @mixin props {
+        background-color: white;
+        display: block;
+        position: absolute;
+        right: 0;
+      }
+
+      @include props;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 12.5%;
+      width: 75%;
+
+      &::before,
+      &::after {
+        @include props;
+        content: '';
+        height: 100%;
+      }
+
+      &::before {
+        width: 62%;
+        bottom: 275%;
+      }
+
+      &::after {
+        width: 77.78%;
+        top: 275%;
+      }
+    }
+  }
+}
+
+#left-button-overlay {
+  z-index: 5;
+
+  @include mq(tablet) {
+    z-index: 15;
+  }
+}
+
+#right-button-overlay {
+  z-index: 15;
 }

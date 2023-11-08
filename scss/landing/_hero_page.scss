@@ -2,16 +2,23 @@
 
 .hero {
   &__header {
+    @include main-buttons-container;
+    justify-content: center;
     grid-column: span 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
     &__logo {
-      margin-top: $top-margin;
+      max-height: 60%;
+    }
+
+    @include mq(tablet) {
+      justify-content: left;
     }
   }
 
-  @include mq(tablet) {
-    &__header {
-      grid-column: span 2;
-    }
+  &__title {
+    grid-column: span 4;
   }
 }

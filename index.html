@@ -9,32 +9,44 @@
     <title>SealNext</title>
   </head>
   <body>
-    <button class="menu__button" id="menu-button" type="button">
-      <div class="menu-button-icon">
-        <span class=""></span>
-        <span class=""></span>
-        <span class=""></span>
+    <!-- Can't use z-index without making 2 overlays for each top button -->
+    <!-- PLEASE DO NOT CHANGE THIS -->
+    <div class="screen-overlay container" id="left-button-overlay">
+      <div class="button__container">
+        <button class="button__getstarted">
+          <div class="button__getstarted__container">
+            <span class="button__getstarted__icon"></span>
+          </div>
+          Get Started
+        </button>
+        <button class="button__menu__placeholder" style="visibility: hidden;">
+        </button>
       </div>
-    </button>
-    <div class="dark-theme">
-      <div class="full-height container grid">
-        <header class="hero__header">
-          <img class="hero__header__logo" src="/logo_white.svg" alt="Logo">
-        </header>
-        <!-- <nav class="main-navigation" id="main-navigation" aria-label="Navigation Menu" aria-hidden="true">
-          <ul>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/blogs">Blogs</a></li>
-          </ul>
-        </nav>
-        <h1 class="hero-page-heading">LEADING YOUR BUSINESS INTO THE DIGITAL FUTURE</h1>
-        <video class="hero-page-phone-video" src="/video.mov" autoplay muted loop preload>
-          Your browser does not support the video tag.
-        </video> -->
+    </div>
+    <!-- PLEASE DO NOT CHANGE THIS -->
+    <div class="screen-overlay container" id="right-button-overlay">
+      <div class="button__container">
+        <button class="button__menu">
+          <div class="button__menu__container">
+            <span class="button__menu__icon"></span>
+          </div>
+        </button>
       </div>
+    </div>
+    <!-- End of comment -->
+    <div class="dark-theme z-10">
+      <div class="container full-height">
+        <div class="grid">
+          <header class="hero__header">
+            <img class="hero__header__logo" src="/logo_white.svg" alt="Logo">
+          </header>
+          <div class="new-row"></div>
+          <h1 class="hero__title">LEADING YOUR BUSINESS INTO THE DIGITAL FUTURE</h1>
+        </div>
+      </div>
+    </div>
+    <div class="white-theme z-0">
+      <div class="container full-height"></div>
     </div>
   </body>
 </html>

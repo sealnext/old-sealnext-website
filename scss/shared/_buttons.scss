@@ -18,6 +18,11 @@ button {
     position: absolute;
     top: 0;
     right: 0;
+
+    &__offset {
+      $button-gap: 1rem;
+      right: $button-gap + $main-buttons-container-height;
+    }
   }
 
   &__getstarted {
@@ -88,12 +93,6 @@ button {
     background-color: $button-color;
     border-radius: 100%;
     position: relative;
-
-
-    &__placeholder {
-      @include button-box;
-      margin-left: 1em;
-    }
 
     &__container {
       position: absolute;

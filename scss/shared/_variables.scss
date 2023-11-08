@@ -1,5 +1,10 @@
 @use "sass:map";
 
+$top-margin: 16px;
+$container-width: 1120px;
+$round-border: 999px;
+$main-buttons-container-height: 3rem;
+
 $breakpoints: (
   tablet: 601px,
   desktop: 1200px
@@ -14,13 +19,9 @@ $breakpoints: (
 }
 
 @mixin main-buttons-container {
-  height: 3rem;
+  height: $main-buttons-container-height;
   margin-top: 16px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-
-$top-margin: 16px;
-$container-width: 1120px;
-$round-border: 999px;

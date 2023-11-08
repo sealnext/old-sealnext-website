@@ -12,14 +12,12 @@
     <!-- Can't use z-index without making 2 overlays for each top button -->
     <!-- PLEASE DO NOT CHANGE THIS -->
     <div class="screen-overlay container" id="left-button-overlay">
-      <div class="button__container">
+      <div class="button__container button__container__offset">
         <button class="button__getstarted">
           <div class="button__getstarted__container">
             <span class="button__getstarted__icon"></span>
           </div>
           Get Started
-        </button>
-        <button class="button__menu__placeholder" style="visibility: hidden;">
         </button>
       </div>
     </div>
@@ -36,12 +34,13 @@
     <!-- End of comment -->
     <div class="dark-theme z-10">
       <div class="container full-height">
-        <div class="grid">
+        <div class="grid grid__hero">
           <header class="hero__header">
             <img class="hero__header__logo" src="/logo_white.svg" alt="Logo">
           </header>
-          <div class="new-row"></div>
-          <h1 class="hero__title">LEADING YOUR BUSINESS INTO THE DIGITAL FUTURE</h1>
+          <div class="hero__title__container">
+            <h1 class="hero__title">LEADING YOUR BUSINESS INTO THE DIGITAL FUTURE</h1>
+          </div>
         </div>
       </div>
     </div>

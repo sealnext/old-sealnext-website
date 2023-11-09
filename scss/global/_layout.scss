@@ -1,4 +1,4 @@
-@import '../shared/variables';
+@import "../shared/variables";
 
 // take whole height of viewport
 .full-height {
@@ -6,10 +6,10 @@
 }
 
 .grid {
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 16px;
+  height: 100%;
 
   @include mq(tablet) {
     grid-template-columns: repeat(8, 1fr);

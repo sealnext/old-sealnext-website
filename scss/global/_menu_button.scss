@@ -1,6 +1,16 @@
 .menu_button {
   aspect-ratio: 1/1;
-  
+
+  &:hover &__icon_line_top {
+    transform: translateX(-4.17px);
+  }
+  &:hover &__icon_line_middle {
+    transform: translateX(+3px);
+  }
+  &:hover &__icon_line_bottom {
+    transform: translateX(-0.58px);
+  }
+
   &__trigger_label {
     display: inline-block;
     width: 100%;

@@ -7,7 +7,7 @@ $main-buttons-container-height: 3rem;
 
 $breakpoints: (
   tablet: 601px,
-  desktop: 1200px
+  desktop: 1200px,
 );
 
 @mixin mq($key) {
@@ -21,7 +21,4 @@ $breakpoints: (
 @mixin main-buttons-container {
   height: $main-buttons-container-height;
   margin-top: 16px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }

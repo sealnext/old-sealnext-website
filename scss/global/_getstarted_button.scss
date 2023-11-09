@@ -1,0 +1,41 @@
+$button-color: hsla(230, 90%, 60%, 0.9);
+
+.getstarted_button {
+  &__trigger_checkbox:checked + .contact {
+    display: block;
+  }
+
+  &__trigger_checkbox {
+    display: none;
+  }
+
+  &__trigger_label {
+    background-color: $button-color;
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    color: white;
+    font-size: 1.25rem;
+    white-space: nowrap;
+    display: block;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent;
+    transition: padding-left 0.3s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0.87rem;
+      top: 0.65rem;
+    }
+
+    &:hover {
+      padding-left: 2rem;
+    }
+
+    &:hover::before {
+      content: "+";
+    }
+  }
+}

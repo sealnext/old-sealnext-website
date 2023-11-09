@@ -1,9 +1,10 @@
-@import '../shared/variables';
+@import "../shared/variables";
 
 .hero {
   &__header {
     @include main-buttons-container;
-    justify-content: center;
+    display: flex;
+    align-items: center;
     grid-column: span 4;
 
     @include mq(tablet) {

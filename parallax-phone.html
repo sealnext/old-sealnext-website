@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/parallax-phone/parallax-phone.css"> -->
+    <link rel="stylesheet" href="./css/global/global.css">
+</head>
+
+<script>
+
+    window.addEventListener('scroll', function () {
+        var scrollPosition = window.pageYOffset;
+        var image = document.getElementById('parallaxImage');
+
+        var view2 = document.querySelector('.view-2').offsetTop;
+        var view3 = document.querySelector('.view-3').offsetTop;
+        var endOfView3 = view3 + document.querySelector('.view-3').offsetHeight;
+
+        if (scrollPosition >= view2 && scrollPosition < view3) {
+            // În acest caz, imaginea este fixată și se mișcă cu scroll-ul
+            image.style.position = 'fixed';
+            var newPosition = (scrollPosition - view2) / 1000;
+            image.style.top = Math.max(newPosition, 0) + 'px';
+        } else if (scrollPosition >= view3 && scrollPosition < endOfView3) {
+            // Când scroll-ul se află în view3, imaginea este fixată în partea de sus a view3
+            image.style.position = 'absolute';
+            image.style.top = view3 + 'px';
+        } else {
+            // În alte cazuri, imaginea este setată ca relativă (sau poți alege să o ascunzi)
+            image.style.position = 'relative';
+            image.style.top = 'auto';
+        }
+    });
+
+
+</script>
+<style>
+    #parallaxImage {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        width: 25rem;
+    }
+</style>
+
+<body>
+    <div class="view-1 full-height">
+        <!-- Conținutul celui de-al doilea div -->
+    </div>
+    <div style="background-color: white;" class="view-2 full-height">
+        <img src="phone.png" id="parallaxImage" />
+    </div>
+
+    <div class="view-3 full-height">
+        <!-- Conținutul celui de-al doilea div -->
+    </div>
+    <div style="background-color: white;" class="view-4 full-height">
+        <!-- Conținutul celui de-al doilea div -->
+    </div>
+</body>
+
+</html>

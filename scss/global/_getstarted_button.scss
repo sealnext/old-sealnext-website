@@ -26,7 +26,8 @@ $button-color: hsla(230, 90%, 60%, 0.9);
     &::before {
       content: "";
       position: absolute;
-      left: 14px;
+      left: 0.87rem;
+      top: 0.65rem;
     }
 
     &:hover {

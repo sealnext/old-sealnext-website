@@ -1,0 +1,240 @@
+.contact .header_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact .header_logo_black {
+  width: 15rem;
+}
+
+.contact {
+  overflow-y: auto;
+  display: none;
+  background-color: #fff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: fixed;
+  z-index: 999;
+}
+
+.contact .form_contact {
+  margin-top: 2.5rem;
+
+  &__group {
+    margin: 30px 0 30px 0;
+  }
+}
+
+.contact fieldset {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-block-start: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-end: 0;
+  min-inline-size: 0;
+  border-width: 0;
+  border-style: none;
+  border-color: transparent;
+  border-image: none;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  /* reset */
+}
+
+.contact fieldset legend {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 10px 0 10px 0;
+}
+
+.contact fieldset label {
+  border-color: #d1d1d1;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  margin: 5px;
+  width: max-content;
+}
+
+.contact fieldset label {
+  font-weight: 600;
+  margin: 10px 0 10px 0;
+  display: block;
+  color: #333;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+}
+
+.contact input:-webkit-autofill,
+.contact input:-webkit-autofill:hover,
+.contact input:-webkit-autofill:focus,
+.contact input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #f4f4f4 inset !important;
+  -webkit-text-fill-color: black !important;
+}
+
+.contact ::selection {
+  background: #d0d0d0;
+  color: #000;
+}
+
+.contact ::-moz-selection {
+  background: #ffb7b7;
+  color: #000;
+}
+
+.contact .checkbox-button {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.contact .checkbox-button.selected {
+  background-color: #000;
+  color: #fff;
+}
+
+.contact input[type="submit"] {
+  background-color: #000;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+}
+
+.contact input[type="submit"]:hover {
+  background-color: #333;
+}
+
+.contact input[type="checkbox"] {
+  display: none;
+}
+
+.contact .submit-button {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #292929;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+.contact #footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contact #footer__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 0.1rem;
+
+  &__phone {
+    font-size: 1.35rem;
+  }
+
+  &__email {
+    font-size: 1rem;
+    color: rgb(64, 64, 64);
+  }
+}
+
+.contact #footer__right {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+  width: min-content;
+
+  &__contact {
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+  }
+}
+
+.contact .widgets_wrapper > .content {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.contact .footer__right__contact__circle {
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(202, 202, 202, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.contact input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.contact .form-group label {
+  font-size: 1.2rem;
+}
+
+.contact .form-group [type="checkbox"] + label {
+  display: inline-block;
+  margin: 4px;
+  padding: 8px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  cursor: pointer;
+}
+
+.contact .form-group input[type="checkbox"]:checked + label {
+  /* Stilizare când checkbox-ul este bifat */
+  background-color: #c2c2c2;
+  border-color: #c2c2c2;
+  // color: white;
+}

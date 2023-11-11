@@ -1,26 +1,28 @@
-.contact .header_logo {
+#contact .header_logo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.contact .header_logo_black {
+#contact .header_logo_black {
   width: 15rem;
 }
 
-.contact {
+#contact {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
   overflow-y: auto;
-  display: none;
-  background-color: #fff;
+  background-color: #fffffffa;
   padding-left: 1rem;
   padding-right: 1rem;
   position: fixed;
-  z-index: 999;
+  z-index: 1;
 }
 
-.contact .form_contact {
+#contact .form_contact {
   margin-top: 2.5rem;
 
   &__group {
@@ -28,7 +30,7 @@
   }
 }
 
-.contact fieldset {
+#contact fieldset {
   margin-inline-start: 0;
   margin-inline-end: 0;
   padding-block-start: 0;
@@ -46,13 +48,13 @@
   /* reset */
 }
 
-.contact fieldset legend {
+#contact fieldset legend {
   font-weight: bold;
   font-size: 1.2rem;
   margin: 10px 0 10px 0;
 }
 
-.contact fieldset label {
+#contact fieldset label {
   border-color: #d1d1d1;
   border-radius: 5px;
   border-width: 1px;
@@ -60,53 +62,51 @@
   padding: 10px;
   margin: 5px;
   width: max-content;
-}
-
-.contact fieldset label {
+  background-color: white;
   font-weight: 600;
-  margin: 10px 0 10px 0;
   display: block;
   color: #333;
 }
 
-.contact input[type="text"],
-.contact input[type="email"],
-.contact textarea {
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
   width: 100%;
   padding: 15px;
   border: none;
-  background-color: #f4f4f4;
+  background-color: rgb(255 255 255 / 78%);
   border-radius: 5px;
   font-size: 16px;
+  margin-top: 1rem;
 }
 
-.contact input:focus,
-.contact textarea:focus {
+#contact input:focus,
+#contact textarea:focus {
   outline: none;
 }
 
-.contact input:-webkit-autofill,
-.contact input:-webkit-autofill:hover,
-.contact input:-webkit-autofill:focus,
-.contact input:-webkit-autofill:active {
+#contact input:-webkit-autofill,
+#contact input:-webkit-autofill:hover,
+#contact input:-webkit-autofill:focus,
+#contact input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #f4f4f4 inset !important;
   -webkit-text-fill-color: black !important;
 }
 
-.contact ::selection {
+#contact ::selection {
   background: #d0d0d0;
   color: #000;
 }
 
-.contact ::-moz-selection {
+#contact ::-moz-selection {
   background: #ffb7b7;
   color: #000;
 }
 
-.contact .checkbox-button {
-  background: #f0f0f0;
+#contact .checkbox-button {
+  background: #f0f0f0f2;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -115,14 +115,14 @@
   cursor: pointer;
 }
 
-.contact .checkbox-button.selected {
+#contact .checkbox-button.selected {
   background-color: #000;
-  color: #fff;
+  color: #fffffff2;
 }
 
-.contact input[type="submit"] {
+#contact input[type="submit"] {
   background-color: #000;
-  color: white;
+  color: #fffffff2;
   padding: 15px 20px;
   border: none;
   border-radius: 5px;
@@ -135,15 +135,15 @@
   width: 100%;
 }
 
-.contact input[type="submit"]:hover {
+#contact input[type="submit"]:hover {
   background-color: #333;
 }
 
-.contact input[type="checkbox"] {
+#contact input[type="checkbox"] {
   display: none;
 }
 
-.contact .submit-button {
+#contact .submit-button {
   box-sizing: border-box;
   width: 100%;
   background-color: #292929;
@@ -154,14 +154,14 @@
   font-size: 1rem;
 }
 
-.contact #footer {
+#contact #footer {
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.contact #footer__left {
+#contact #footer__left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -178,7 +178,7 @@
   }
 }
 
-.contact #footer__right {
+#contact #footer__right {
   display: flex;
   flex-direction: column;
   row-gap: 0.3rem;
@@ -192,12 +192,12 @@
   }
 }
 
-.contact .widgets_wrapper > .content {
+#contact .widgets_wrapper > .content {
   justify-content: flex-end;
   display: flex;
 }
 
-.contact .footer__right__contact__circle {
+#contact .footer__right__contact__circle {
   border-radius: 100%;
   width: 3rem;
   height: 3rem;
@@ -212,29 +212,29 @@
   }
 }
 
-.contact input[type="checkbox"] {
+#contact input[type="checkbox"] {
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.contact .form-group label {
-  font-size: 1.2rem;
+#contact .form_contact__group label {
+  font-size: 1.1rem;
 }
 
-.contact .form-group [type="checkbox"] + label {
+#contact .form-group [type="checkbox"] + label {
   display: inline-block;
   margin: 4px;
   padding: 8px;
-  background-color: #fff;
+  background-color: #fffffff2;
   border: 2px solid #ddd;
   cursor: pointer;
 }
 
-.contact .form-group input[type="checkbox"]:checked + label {
+#contact .form-group input[type="checkbox"]:checked + label {
   /* Stilizare când checkbox-ul este bifat */
-  background-color: #c2c2c2;
-  border-color: #c2c2c2;
+  background-color: #c2c2c2f2;
+  border-color: #c2c2c2f2;
   // color: white;
 }

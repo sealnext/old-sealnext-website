@@ -1,12 +1,16 @@
 $button-color: hsla(230, 90%, 60%, 0.9);
 
 .getstarted_button {
-  &__trigger_checkbox:checked + .contact {
-    display: block;
-  }
-
   &__trigger_checkbox {
     display: none;
+
+    &:checked + .getstarted_button__trigger_label::before {
+      content: "+";
+    }
+
+    &:checked + .getstarted_button__trigger_label {
+      padding-left: 2rem;
+    }
   }
 
   &__trigger_label {
@@ -30,6 +34,7 @@ $button-color: hsla(230, 90%, 60%, 0.9);
       top: 0.65rem;
     }
 
+    // TODO only if desktop @Andrei
     &:hover {
       padding-left: 2rem;
     }

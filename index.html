@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/global/global.css">
   <link rel="stylesheet" href="./css/landing/landing.css">
+  <link rel="stylesheet" href="./css/parallax-phone/parallax-phone.css">
   <link rel="icon" type="image/svg+xml" href="/vite.svg">
   <title>SealNext</title>
 </head>
@@ -36,7 +37,7 @@
     </button>
   </div>
 
-  <div class="dark-theme full-height">
+  <div class="dark-theme full-height  view-1">
     <div class="grid grid__hero container">
       <header class="hero__header">
         <img class="hero__header__logo" src="/logo_white.svg" alt="Logo">
@@ -51,9 +52,112 @@
       </div>
     </div>
   </div>
-  <div class="white-theme z-0">
-    <div class="container full-height"></div>
+  <div class="wrapper-parallax-theme">
+  <div class=" z-0 view-2">
+    <div class="container full-height">
+      <div class="wrapper-parallax">
+        <span class="wrapper-text top-left">Lorem ipsum dolor <br> sit amet, <br> consectetur <br> adipiscing  <br> elit.</span>
+        <span class="wrapper-text top-right">Drop the limits. Unleash your business.</span>
+        <div class="seal-next-word"></div>
+        <span class="wrapper-text bottom-left">Pushing your software  boundaries with SealNext.</span>
+        <span class="wrapper-text bottom-right">Developing <br> software solutions to accelerate your business growth.</span>
+        <div>
+          <div class="iphone-mockup"></div>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="z-0  view-3">
+    <div class="grid-container-topics">
+      <div class="column-topic left-column">
+        <img src="/topics/left_1.jpg" alt="Image 1">
+        <br>
+        <img src="/topics/left_2.jpg" alt="Image 2">
+        <br>
+        <img src="/topics/left_3.jpg" alt="Image 3">
+      </div>
+      <div class="column-topic middle-column">
+        <img src="/topics/middle_1.jpg" alt="Image 4">
+        <br>
+        <img src="/topics/middle_2.jpg" alt="Image 5">
+        <br>
+        <img src="/topics/middle_3.jpg" alt="Image 6">
+        <br>
+      </div>
+      <div class="column-topic right-column">
+        <img src="/topics/right_1.jpg" alt="Image 7">
+        <br>
+        <img src="/topics/right_2.jpg" alt="Image 8">
+        <br>
+        <img src="/topics/right_3.jpg" alt="Image 9">
+        <br>
+      </div>
+      </div>
+    </div>
+    <div class="dark-theme z-0  view-3">
+      <div class="container full-height">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrolledHeight = window.pageYOffset,
+              sealNextWord = document.querySelector('.seal-next-word'),
+              iphoneMockup = document.querySelector('.iphone-mockup'),
+              wrapperTextTopLeft = document.querySelector('.top-left'),
+              wrapperTextTopRight = document.querySelector('.top-right'),
+              wrapperTextBottomLeft = document.querySelector('.bottom-left'),
+              wrapperTextBottomRight = document.querySelector('.bottom-right'),
+              view2Start = document.querySelector('.view-2').offsetTop,
+              view2Height = document.querySelector('.view-2').offsetHeight,
+              view3Start = document.querySelector('.view-3').offsetTop,
+              view3Height = document.querySelector('.view-3').offsetHeight,
+              leftColumnImages = document.querySelectorAll('.left-column img'),
+              middleColumnImages = document.querySelectorAll('.middle-column img'),
+              rightColumnImages = document.querySelectorAll('.right-column img');
+      ;
+
+      if (window.innerWidth <= 600) {
+        sealNextWord.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
+        wrapperTextTopLeft.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
+        wrapperTextTopRight.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
+        wrapperTextBottomLeft.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
+        wrapperTextBottomRight.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
+      } else {
+        sealNextWord.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
+        wrapperTextTopLeft.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
+        wrapperTextTopRight.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
+        wrapperTextBottomLeft.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
+        wrapperTextBottomRight.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
+      }
+
+      if (scrolledHeight >= view2Start && scrolledHeight <= (view2Start + view2Height)) {
+        var rotation = (scrolledHeight - view2Start) * -0.08;
+        if(rotation >= -19.5) {
+          iphoneMockup.style.transform = 'translate(-50%, -50%) rotate(' + rotation + 'deg)';
+        }
+      }
+
+      if (scrolledHeight >= view3Start && scrolledHeight <= (view3Start + view3Height)) {
+        var leftRightParallaxOffset = (scrolledHeight - view3Start) * 0.3;
+        var middleParallaxOffset = (scrolledHeight - view3Start) * 0.8;
+
+        leftColumnImages.forEach(function(img) {
+          img.style.transform = 'translate3d(0, ' + leftRightParallaxOffset + 'px, 0)';
+        });
+
+        middleColumnImages.forEach(function(img) {
+          img.style.transform = 'translate3d(0, ' + middleParallaxOffset + 'px, 0)';
+        });
+
+        rightColumnImages.forEach(function(img) {
+          img.style.transform = 'translate3d(0, ' + leftRightParallaxOffset + 'px, 0)';
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

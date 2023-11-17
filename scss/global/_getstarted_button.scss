@@ -1,16 +1,10 @@
 $button-color: hsla(230, 90%, 60%, 0.9);
 
 .getstarted_button {
+  pointer-events: all;
+
   &__trigger_checkbox {
     display: none;
-
-    &:checked + .getstarted_button__trigger_label::before {
-      content: "+";
-    }
-
-    &:checked + .getstarted_button__trigger_label {
-      padding-left: 2rem;
-    }
   }
 
   &__trigger_label {
@@ -26,21 +20,5 @@ $button-color: hsla(230, 90%, 60%, 0.9);
     -webkit-tap-highlight-color: transparent;
     -webkit-focus-ring-color: transparent;
     transition: padding-left 0.3s ease;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0.87rem;
-      top: 0.65rem;
-    }
-
-    // TODO only if desktop @Andrei
-    &:hover {
-      padding-left: 2rem;
-    }
-
-    &:hover::before {
-      content: "+";
-    }
   }
 }

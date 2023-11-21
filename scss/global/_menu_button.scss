@@ -1,4 +1,5 @@
 .menu_button {
+  pointer-events: all;
   aspect-ratio: 1/1;
 
   &:hover &__icon_line_top {

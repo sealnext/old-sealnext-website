@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,14 +12,142 @@
   <title>SealNext</title>
 </head>
 
-<body>
-  <div class="sticky_buttons container">
-    <button class="getstarted_button button__container">
-      <input type="checkbox" id="getstarted_trigger" class="getstarted_button__trigger_checkbox">
-      <label for="getstarted_trigger" class="getstarted_button__trigger_label">
-        Get Started
-      </label>
-    </button>
+<body style="overflow: auto;">
+  <section id="contact" style="flex-direction: column; display: none;">
+    <div id="contact-wrapper">
+      <div id="contact-background"></div>
+      <div id="contact-desktop-sidebar">
+        <header class="contact-header-desktop">
+          <img class="hero__header__logo header_logo_black" src="/logo_white.svg" alt="Logo">
+        </header>
+        <div id="contact-desktop-sidebar__contact-info">
+          <div style="filter: invert(1) grayscale(1);" class="clutch-widget" data-url="https://widget.clutch.co"
+            data-widget-type="1" data-height="40" data-nofollow="true" data-expandifr="true" data-scale="100"
+            data-clutchcompany-id="2271480"></div>
+          <a style="color:#9f9f9f;" href="mailto:support@sealnext.com" class="mailto-link">support@sealnext.com</a>
+        </div>
+      </div>
+      <div class="contact-container container">
+        <header class="contact-header hero__header">
+          <img class="hero__header__logo header_logo_black" style="filter: invert(100%);" src="/logo_white.svg"
+            alt="Logo">
+        </header>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="fad8eedb-8a2b-4342-a05d-87b4d69b3adf" />
+          <input type="hidden" name="subject" value="Contact form" />
+          <input type="hidden" name="redirect" value="https://www.sealnext.com" />
+
+          <div class="contact-form__group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith from Google" required>
+          </div>
+
+          <div class="contact-form__group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@google.com" required>
+          </div>
+
+          <fieldset>
+            <legend>I'm interested in...</legend>
+
+            <input type="checkbox" id="webdev" name="interest" value="webdev" required>
+            <label for="webdev">Web Development</label>
+
+            <input type="checkbox" id="appdev" name="interest" value="appdev">
+            <label for="appdev">App Development</label>
+
+            <input type="checkbox" id="uxuidesign" name="interest" value="uxuidesign">
+            <label for="uxuidesign">UX/UI Design</label>
+
+            <input type="checkbox" id="branding" name="interest" value="branding">
+            <label for="branding">Branding</label>
+
+            <input type="checkbox" id="sitefromscratch" name="interest" value="sitefromscratch">
+            <label for="sitefromscratch">Site from Scratch</label>
+
+            <input type="checkbox" id="appfromscratch" name="interest" value="appfromscratch">
+            <label for="appfromscratch">App from Scratch</label>
+
+            <input type="checkbox" id="maintenance" name="interest" value="maintenance">
+            <label for="maintenance">Maintenance</label>
+
+          </fieldset>
+
+          <div class="contact-form__group">
+            <label for="message">Tell us more about your project</label>
+            <textarea id="project" name="message" placeholder="Outline your great idea" required></textarea>
+          </div>
+          <div class="h-captcha" data-captcha="true"></div>
+
+          <button type="submit" class="submit-button">Submit the request</button>
+        </form>
+        <footer id="contact-footer">
+          <span>Need assistance? Contact our support team</span>
+          <a href="mailto:support@sealnext.com" class="mailto-link">support@sealnext.com</a>
+        </footer>
+      </div>
+      <div id="contact-info">
+        <a target="_blank" href="https://www.linkedin.com/company/sealnext" class="contact-info__circle"><img
+            src="icons/linkedin-in.svg" style="width: 1.2rem;"></a>
+        <a target="_blank" href="https://www.instagram.com/seal.next" class="contact-info__circle"><img
+            src="icons/instagram.svg"></a>
+        <a target="_blank" href="https://facebook.com/sealnext" class="contact-info__circle"><img
+            src="icons/facebook-f.svg" style="width: 1rem;"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" style="flex-direction: column; display: none;">
+    <div id="menu-wrapper">
+      <div id="menu-background"></div>
+      <div id="menu-desktop-sidebar">
+        <header class="menu-header-desktop">
+          <img class="hero__header__logo header_logo_black" src="/logo_white.svg" alt="Logo">
+        </header>
+        <div id="menu-desktop-sidebar__menu-info">
+          <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>
+          <div style="filter: invert(1) grayscale(1);" class="clutch-widget" data-url="https://widget.clutch.co"
+            data-widget-type="1" data-height="40" data-nofollow="true" data-expandifr="true" data-scale="100"
+            data-clutchcompany-id="2271480"></div>
+          <a style="color:#9f9f9f;" href="mailto:support@sealnext.com" class="mailto-link">support@sealnext.com</a>
+        </div>
+      </div>
+      <div class="menu-container container">
+        <header class="menu-header hero__header">
+          <img class="hero__header__logo header_logo_black" style="filter: invert(100%);" src="/logo_white.svg"
+            alt="Logo">
+        </header>
+        <ul class="custom-list">
+          <li><a id="portfolio-link" href="#portofolio">Portfolio</a></li>
+          <li><a id="services-link" href="#services">Services</a></li>
+          <li><a id="review-link" href="#reviews">Reviews</a></li>
+          <li><a id="contact-link" href="#contact">Contact</a></li>
+          <li><a id="blogs-link" href="#blogs">Blogs</a></li>
+        </ul>
+        <footer id="menu-footer">
+          <span>Need assistance? menu our support team</span>
+          <a href="mailto:support@sealnext.com" class="mailto-link">support@sealnext.com</a>
+        </footer>
+      </div>
+      <div id="menu-info">
+        <a target="_blank" href="https://www.linkedin.com/company/sealnext" class="menu-info__circle"><img
+            src="icons/linkedin-in.svg" style="width: 1.2rem;"></a>
+        <a target="_blank" href="https://www.instagram.com/seal.next" class="menu-info__circle"><img
+            src="icons/instagram.svg"></a>
+        <a target="_blank" href="https://facebook.com/sealnext" class="menu-info__circle"><img
+            src="icons/facebook-f.svg" style="width: 1rem;"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="main">
+    <div class="sticky_buttons container">
+      <button class="getstarted_button button__container">
+        <input type="checkbox" id="getstarted_trigger" class="getstarted_button__trigger_checkbox">
+        <label for="getstarted_trigger" class="getstarted_button__trigger_label">
+          Get Started
+        </label>
+      </button>
 
     <button class="menu_button button__container">
       <input type="checkbox" id="menu_trigger" class="menu_button__trigger_checkbox">
@@ -51,7 +180,7 @@
       </div>
     </div>
   </div>
-  <div class="wrapper-parallax-theme">
+  <section class="wrapper-parallax-theme">
   <div class=" z-0 view-2">
     <div class="container full-height">
       <div class="wrapper-parallax">
@@ -94,83 +223,89 @@
       </div>
     </div>
     </section>
+  </div>
     <div class="dark-theme z-0  view-4">
       <div class="container full-height">
       </div>
     </div>
-  </div>
-  <script type="text/javascript">
-    let lastKnownScrollPosition = 0;
-    let ticking = false;
+  </section>
+  </section>
+</body>
 
-    window.addEventListener('scroll', function(e) {
-      lastKnownScrollPosition = window.scrollY;
+<script src="js/menu.js"></script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>
+<script type="text/javascript">
+  let lastKnownScrollPosition = 0;
+  let ticking = false;
 
-      if (!ticking) {
-        window.requestAnimationFrame(function() {
-          handleScroll(lastKnownScrollPosition);
-          ticking = false;
-        });
+  window.addEventListener('scroll', function(e) {
+    lastKnownScrollPosition = window.scrollY;
 
-        ticking = true;
-      }
-    }, {passive: true});
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        handleScroll(lastKnownScrollPosition);
+        ticking = false;
+      });
 
-    function handleScroll(scrollPos) {
-      var scrolledHeight = window.pageYOffset,
-              sealNextWord = document.querySelector('.seal-next-word'),
-              iphoneMockup = document.querySelector('.iphone-mockup'),
-              wrapperTextTopLeft = document.querySelector('.top-left'),
-              wrapperTextTopRight = document.querySelector('.top-right'),
-              wrapperTextBottomLeft = document.querySelector('.bottom-left'),
-              wrapperTextBottomRight = document.querySelector('.bottom-right'),
-              view2Start = document.querySelector('.view-2').offsetTop,
-              view2Height = document.querySelector('.view-2').offsetHeight,
-              view3Start = document.querySelector('.view-3').offsetTop,
-              view3Height = document.querySelector('.view-3').offsetHeight,
-              leftColumnImages = document.querySelectorAll('.left-column img'),
-              middleColumnImages = document.querySelectorAll('.middle-column img'),
-              rightColumnImages = document.querySelectorAll('.right-column img');
-      ;
+      ticking = true;
+    }
+  }, {passive: true});
 
-      if (window.innerWidth <= 600) {
-        sealNextWord.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
-        wrapperTextTopLeft.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
-        wrapperTextTopRight.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
-        wrapperTextBottomLeft.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
-        wrapperTextBottomRight.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
-      } else {
-        sealNextWord.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
-        wrapperTextTopLeft.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
-        wrapperTextTopRight.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
-        wrapperTextBottomLeft.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
-        wrapperTextBottomRight.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
-      }
+  function handleScroll(scrollPos) {
+    var scrolledHeight = window.pageYOffset,
+            sealNextWord = document.querySelector('.seal-next-word'),
+            iphoneMockup = document.querySelector('.iphone-mockup'),
+            wrapperTextTopLeft = document.querySelector('.top-left'),
+            wrapperTextTopRight = document.querySelector('.top-right'),
+            wrapperTextBottomLeft = document.querySelector('.bottom-left'),
+            wrapperTextBottomRight = document.querySelector('.bottom-right'),
+            view2Start = document.querySelector('.view-2').offsetTop,
+            view2Height = document.querySelector('.view-2').offsetHeight,
+            view3Start = document.querySelector('.view-3').offsetTop,
+            view3Height = document.querySelector('.view-3').offsetHeight,
+            leftColumnImages = document.querySelectorAll('.left-column img'),
+            middleColumnImages = document.querySelectorAll('.middle-column img'),
+            rightColumnImages = document.querySelectorAll('.right-column img');
+    ;
 
-      if (scrolledHeight >= view2Start && scrolledHeight <= (view2Start + view2Height)) {
-        var rotation = (scrolledHeight - view2Start) * -0.08;
-        if (rotation >= -19.5) {
-          iphoneMockup.style.transform = 'translate(-50%, -50%) rotate(' + rotation + 'deg)';
-        }
-      }
+    if (window.innerWidth <= 600) {
+      sealNextWord.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
+      wrapperTextTopLeft.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
+      wrapperTextTopRight.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
+      wrapperTextBottomLeft.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
+      wrapperTextBottomRight.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.5) + 'px, -2px) scale(.8)';
+    } else {
+      sealNextWord.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
+      wrapperTextTopLeft.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
+      wrapperTextTopRight.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
+      wrapperTextBottomLeft.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
+      wrapperTextBottomRight.style.transform = 'translate3d(0, ' + -(scrolledHeight * 0.9) + 'px, -1px) scale(1)';
+    }
 
-      if (scrolledHeight >= (view2Start + view2Height)/2 && scrolledHeight <= (view3Start + view3Height)) {
-        var leftRightParallaxOffset = (scrolledHeight - (view2Start + view2Height)/2) * 0.08;
-        var middleParallaxOffset = (scrolledHeight - (view2Start + view2Height)/2) * -0.08;
-
-        leftColumnImages.forEach(function (img) {
-          img.style.transform = 'translate3d(0, ' + leftRightParallaxOffset + 'px, 0)';
-        });
-
-        middleColumnImages.forEach(function (img) {
-          img.style.transform = 'translate3d(0, ' + middleParallaxOffset + 'px, 0)';
-        });
-
-        rightColumnImages.forEach(function (img) {
-          img.style.transform = 'translate3d(0, ' + leftRightParallaxOffset + 'px, 0)';
-        });
+    if (scrolledHeight >= view2Start && scrolledHeight <= (view2Start + view2Height)) {
+      var rotation = (scrolledHeight - view2Start) * -0.08;
+      if (rotation >= -19.5) {
+        iphoneMockup.style.transform = 'translate(-50%, -50%) rotate(' + rotation + 'deg)';
       }
     }
-  </script>
-</body>
+
+    if (scrolledHeight >= (view2Start + view2Height)/2 && scrolledHeight <= (view3Start + view3Height)) {
+      var leftRightParallaxOffset = (scrolledHeight - (view2Start + view2Height)/2) * 0.08;
+      var middleParallaxOffset = (scrolledHeight - (view2Start + view2Height)/2) * -0.08;
+
+      leftColumnImages.forEach(function (img) {
+        img.style.transform = 'translate3d(0, ' + leftRightParallaxOffset + 'px, 0)';
+      });
+
+      middleColumnImages.forEach(function (img) {
+        img.style.transform = 'translate3d(0, ' + middleParallaxOffset + 'px, 0)';
+      });
+
+      rightColumnImages.forEach(function (img) {
+        img.style.transform = 'translate3d(0, ' + leftRightParallaxOffset + 'px, 0)';
+      });
+    }
+  }
+</script>
 </html>

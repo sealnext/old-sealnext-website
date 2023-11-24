@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/global/global.css">
   <link rel="stylesheet" href="./css/landing/landing.css">
+  <link rel="stylesheet" href="./css/parallax-phone/parallax-phone.css">
   <link rel="icon" type="image/svg+xml" href="/vite.svg">
   <title>SealNext</title>
 </head>
@@ -148,44 +149,91 @@
         </label>
       </button>
 
-      <button class="menu_button button__container">
-        <input type="checkbox" id="menu_trigger" class="menu_button__trigger_checkbox">
-        <label for="menu_trigger" class="menu_button__trigger_label">
-          <svg class="menu_button__icon" viewBox="0 0 55 55">
-            <circle class="menu_button__icon_bg" opacity="0.9" cx="27.5" cy="27" r="27" />
-            <line class="menu_button__icon_line menu_button__icon_line_bottom" x1="18.8999" y1="35.1499" x2="35.9999"
-              y2="35.1499" stroke="rgb(255, 255, 255)" stroke-width="3.5" />
-            <line class="menu_button__icon_line menu_button__icon_line_top" x1="22.5" y1="18.95" x2="36" y2="18.95"
-              stroke="rgb(255, 255, 255)" stroke-width="3.5" />
-            <line class="menu_button__icon_line menu_button__icon_line_middle" x1="15.3" y1="27.05" x2="36" y2="27.05"
-              stroke="rgb(255, 255, 255)" stroke-width="3.5" />
-          </svg>
-        </label>
-      </button>
+    <button class="menu_button button__container">
+      <input type="checkbox" id="menu_trigger" class="menu_button__trigger_checkbox">
+      <label for="menu_trigger" class="menu_button__trigger_label">
+        <svg class="menu_button__icon" viewBox="0 0 55 55">
+          <circle class="menu_button__icon_bg" opacity="0.9" cx="27.5" cy="27" r="27" />
+          <line class="menu_button__icon_line menu_button__icon_line_bottom" x1="18.8999" y1="35.1499" x2="35.9999"
+            y2="35.1499" stroke="rgb(255, 255, 255)" stroke-width="3.5" />
+          <line class="menu_button__icon_line menu_button__icon_line_top" x1="22.5" y1="18.95" x2="36" y2="18.95"
+            stroke="rgb(255, 255, 255)" stroke-width="3.5" />
+          <line class="menu_button__icon_line menu_button__icon_line_middle" x1="15.3" y1="27.05" x2="36" y2="27.05"
+            stroke="rgb(255, 255, 255)" stroke-width="3.5" />
+        </svg>
+      </label>
+    </button>
+  </div>
+
+  <div class="dark-theme full-height  view-1">
+    <div class="grid grid__hero container">
+      <header class="hero__header">
+        <img class="hero__header__logo" src="/logo_white.svg" alt="Logo">
+      </header>
+      <div class="hero__title__container">
+        <h1 class="hero__title">LEADING YOUR BUSINESS INTO THE DIGITAL FUTURE</h1>
+      </div>
+      <div class="hero__video__container">
+        <video class="hero__video">
+          <source src="/hero_page_phone.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
-    <div class="dark-theme full-height">
-      <div class="grid grid__hero container">
-        <header class="hero__header">
-          <img class="hero__header__logo" src="/logo_white.svg" alt="Logo">
-        </header>
-        <div class="hero__title__container">
-          <h1 class="hero__title">LEADING YOUR BUSINESS INTO THE DIGITAL FUTURE</h1>
-        </div>
-        <div class="hero__video__container">
-          <video class="hero__video">
-            <source src="/hero_page_phone.mp4" type="video/mp4">
-          </video>
+  </div>
+  <section class="wrapper-parallax-theme">
+  <div class=" z-0 view-2">
+    <div class="container full-height">
+      <div class="wrapper-parallax">
+        <span class="wrapper-text top-left">Lorem ipsum dolor <br> sit amet, <br> consectetur <br> adipiscing  <br> elit.</span>
+        <span class="wrapper-text top-right">Drop the limits. Unleash your business.</span>
+        <div class="seal-next-word"></div>
+        <span class="wrapper-text bottom-left">Pushing your software  boundaries with SealNext.</span>
+        <span class="wrapper-text bottom-right">Developing <br> software solutions to accelerate your business growth.</span>
+        <div>
+          <div class="iphone-mockup"></div>
         </div>
       </div>
     </div>
-    <div class="white-theme">
-      <div class="container full-height"></div>
+  </div>
+  <div class="z-0  view-3">
+    <section class="topics-section">
+    <div class="grid-container-topics">
+      <div class="column-topic left-column">
+        <img src="/topics/left_1.png" alt="Image 1">
+        <br>
+        <img src="/topics/left_2.jpg" alt="Image 2">
+        <br>
+        <img src="/topics/left_3.jpg" alt="Image 1">
+        <br>
+      </div>
+      <div class="column-topic middle-column">
+        <img src="/topics/middle_1.jpg" alt="Image 4">
+        <br>
+        <img src="/topics/middle_2.jpg" alt="Image 5">
+        <br>
+        <img src="/topics/middle_3.jpg" alt="Image 6">
+        <br>
+      </div>
+      <div class="column-topic right-column">
+        <img src="/topics/right_1.jpg" alt="Image 7">
+        <br>
+        <img src="/topics/right_2.jpg" alt="Image 8">
+        <br>
+        <img src="/topics/right_3.jpg" alt="Image 1">
+      </div>
+    </div>
+    </section>
+  </div>
+    <div class="dark-theme z-0  view-4">
+      <div class="container full-height">
+      </div>
     </div>
   </section>
-
+  </section>
 </body>
 
 <script src="js/menu.js"></script>
+<script src="js/parallax_animation.js"></script>
 <script src="https://web3forms.com/client/script.js" async defer></script>
 <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script>
 

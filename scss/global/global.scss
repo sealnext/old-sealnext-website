@@ -7,3 +7,13 @@
 @use "menu";
 @use "contact_button";
 @use "contact";
+
+// hide scroll
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

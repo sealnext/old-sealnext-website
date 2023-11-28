@@ -83,7 +83,13 @@
   animation: slideDown 0.6s forwards;
 }
 
+#menu::-webkit-scrollbar {
+  display: none;
+}
+
 #menu {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -389,7 +395,7 @@ input[type="checkbox"] {
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  background-color: #101114;
+  background-color: #101114f8;
   right: 0;
 }
 
@@ -416,7 +422,7 @@ input[type="checkbox"] {
     width: 75vw;
     height: 100%;
     right: 0;
-    background-color: #101114;
+    background-color: #101114f8;
   }
   #menu-info {
     position: absolute;

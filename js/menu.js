@@ -147,6 +147,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeMenu() {
         if (showCode !== 0) {
             hideMenuSection();
+            menuSection.classList.add('animate-remove-blur'); // Adăugăm animația pentru eliminarea blurului
+            menuSection.classList.remove('animate-apply-blur');
             showCode = 0;
         }
     }

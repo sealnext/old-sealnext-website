@@ -1,12 +1,17 @@
 @import "../shared/variables";
 
+#scrollDown {
+  cursor: pointer;
+}
+
 .hero {
   &__page {
     max-height: 1440px;
   }
 
   &__background {
-    background-image: url(/images/cube1.png), url(/images/cube2.png), url(/images/cube3.png);
+    background-image: url(/images/cube1.png), url(/images/cube2.png),
+      url(/images/cube3.png);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: -110% 45%, 170% 55%, 120% 10%;
     background-size: 70% auto, 50% auto, 35% auto;
@@ -37,6 +42,10 @@
 
     &__logo {
       max-height: 60%;
+      -webkit-user-select: none; /* Chrome, Safari, Opera */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none;
     }
   }
 
@@ -45,8 +54,12 @@
     position: relative;
 
     &__title {
+      -webkit-user-select: none; /* Chrome, Safari, Opera */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none;
       position: absolute;
-      font-family: 'spaceland';
+      font-family: "spaceland";
       font-size: 5rem;
       line-height: 0.9;
       top: 40%;
@@ -119,7 +132,12 @@
       }
 
       &__subtitle {
-        font-family: 'futura-condensed';
+        cursor: pointer;
+        -webkit-user-select: none; /* Chrome, Safari, Opera */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
+        font-family: "futura-condensed";
         font-size: 2.2rem;
         font-weight: 600;
         white-space: nowrap;

@@ -3,29 +3,10 @@
 // take whole height of viewport
 .full-height {
   height: 100vh;
+  height: 100svh;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 16px;
-  height: 100%;
-
-  @include mq(tablet) {
-    grid-template-columns: repeat(8, 1fr);
-  }
-
-  @include mq(desktop) {
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 32px;
-  }
-
-  &__hero {
-    grid-template-rows: 1fr auto 1fr;
-  }
-}
-
-// centered container which doesn't exceed 1200px
+// centered container which doesn't exceed 1120px
 .container {
   width: calc(100% - 32px); // 16px margin minimum
   max-width: $container-width;
@@ -38,18 +19,4 @@
   top: 0;
   left: 0;
   right: 0;
-}
-
-/* Move elements to new row inside grid */
-.new-row {
-  grid-column: 1 / -1;
-  height: 0;
-}
-
-/* Generate utility classes for z-index */
-@for $i from 0 through 5 {
-  .z-#{5 * $i} {
-    position: relative;
-    z-index: #{5 * $i};
-  }
 }

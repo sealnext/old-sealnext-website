@@ -1,0 +1,151 @@
+#reviews {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  padding: 20px;
+  height: 27rem;
+}
+
+// #reviews #why-customers-love {
+//   text-align: left;
+//   font-size: 1.2rem;
+//   font-weight: normal;
+// }
+
+// .review {
+//   margin-bottom: 10px;
+// }
+
+// #reviews-container {
+//   height: 20rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-evenly;
+// }
+
+// #review-details {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// #reviewer-details {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
+// #reviewer-details p {
+//   margin: 5px;
+// }
+
+// blockquote {
+//   font-style: italic;
+//   font-weight: bold;
+//   font-size: 2rem;
+//   margin: 0;
+//   color: #333;
+// }
+
+// .reviewer-info {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-top: 10px;
+// }
+
+// .reviewer-image {
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 50%;
+//   margin-right: 10px;
+// }
+
+// .reviewer-name {
+//   margin: 0;
+//   font-weight: bold;
+// }
+
+// .reviewer-title {
+//   margin: 0;
+//   color: #666;
+//   font-size: 0.8em;
+// }
+
+// .review-navigation {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .nav-button {
+//   color: gray;
+//   padding: 5px 10px;
+//   margin: 0 5px;
+//   cursor: pointer;
+// }
+
+// .review-page-number {
+//   font-size: 0.9em;
+//   color: #666;
+// }
+
+.contact-box {
+  width: 50%;
+  background: linear-gradient(to bottom right, #4c4c4c, #333333);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  box-sizing: border-box;
+  position: absolute;
+  overflow: hidden;
+  left: 25%;
+}
+
+.contact-box:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  background: url("cross-pattern.png") repeat; /* You'll need to have a pattern image */
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-content {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-box h2 {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.contact-box p {
+  color: #ddd;
+  margin-bottom: 2em;
+}
+
+.demo-request {
+  color: #aaa;
+  margin-bottom: 2em;
+}
+
+.contact-box button {
+  background: #ffffff;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-box button:hover {
+  background: #f8f8f8;
+}

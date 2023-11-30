@@ -6,6 +6,15 @@
   position: relative;
 }
 
+.wrapper-text {
+  position: absolute;
+  font-size: clamp(18px, 2vw, 30px);
+  font-weight: bold;
+  transform-origin: center;
+  transform: translateZ(3px);
+  font-family: 'free-sans-bold';
+}
+
 .seal-next-word {
   position: absolute;
   width: 100%;
@@ -23,14 +32,6 @@
     background-image: url('/seal_next_img_mobile.png');
     top: 50%;
   }
-}
-
-.wrapper-text {
-  position: absolute;
-  font-size: clamp(18px, 2vw, 30px);
-  font-weight: bold;
-  transform-origin: center;
-  transform: translateZ(3px);
 }
 
 .top-left,

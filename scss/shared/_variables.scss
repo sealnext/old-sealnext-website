@@ -1,13 +1,14 @@
 @use "sass:map";
 
 $top-margin: 16px;
-$container-width: 1200px;
+$container-width: 1120px;
 $round-border: 999px;
 $main-buttons-container-height: 3rem;
 
 $breakpoints: (
   tablet: 601px,
-  desktop: 1200px,
+  laptop: 1024px,
+  desktop: 1201px,
 );
 
 @mixin mq($key) {
@@ -18,7 +19,20 @@ $breakpoints: (
   }
 }
 
+@mixin m($orientation) {
+  @media (orientation: $orientation) {
+    @content;
+  }
+}
+
 @mixin main-buttons-container {
   height: $main-buttons-container-height;
   margin-top: 16px;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

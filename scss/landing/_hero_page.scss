@@ -1,35 +1,186 @@
 @import "../shared/variables";
 
 .hero {
+  &__page {
+    max-height: 1440px;
+  }
+
+  &__background {
+    background-image: url(/images/cube1.png), url(/images/cube2.png), url(/images/cube3.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: -110% 45%, 170% 55%, 120% 10%;
+    background-size: 70% auto, 50% auto, 35% auto;
+    background-blend-mode: lighten, lighten, lighten;
+    mix-blend-mode: lighten;
+    height: 100%;
+    max-width: $container-width + 200px;
+    margin: 0 auto;
+
+    @include m(landscape) {
+      background-position: 57% 30%, 0% 30%, 27% 70%;
+      background-size: revert;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+  }
+
   &__header {
     @include main-buttons-container;
     display: flex;
     align-items: center;
-    grid-column: span 4;
-
-    @include mq(tablet) {
-      justify-content: left;
-    }
+    justify-content: left;
 
     &__logo {
       max-height: 60%;
     }
   }
 
-  &__title {
-    font-size: 4rem;
+  &__main {
+    flex-grow: 1;
+    position: relative;
 
-    &__container {
-      grid-column: 1 / span 7;
-      align-self: center;
-    }
-  }
+    &__title {
+      position: absolute;
+      font-family: 'spaceland';
+      font-size: 5rem;
+      line-height: 0.9;
+      top: 40%;
+      transform: translateY(-50%);
+      left: 0;
 
-  &__video {
-    &__container {
-      grid-column: span 5 / -1;
+      @media (min-width: 570px) {
+        font-size: 6rem;
+        line-height: 0.85;
+      }
+
+      @media (min-width: 690px) {
+        font-size: 7rem;
+        line-height: 0.825;
+      }
+
+      @media (min-width: 840px) {
+        font-size: 8rem;
+        line-height: 0.8;
+      }
+
+      @include m(portrait) {
+        top: 5%;
+        transform: none;
+      }
     }
-    width: 100%;
-    aspect-ratio: 1 / 1;
+
+    &__video {
+      &__container {
+        position: absolute;
+        width: 27rem;
+        mix-blend-mode: lighten;
+
+        right: 0;
+        transform: translateY(-50%);
+
+        @include m(landscape) {
+          top: 50%;
+        }
+
+        @include m(portrait) {
+          max-width: 100%;
+          min-width: 70%;
+          transform: none;
+          bottom: 5%;
+          right: 0;
+        }
+      }
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+    &__bottom {
+      position: absolute;
+      max-width: 800px;
+      bottom: 5%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+      width: 100%;
+      left: 0;
+
+      @media (max-height: 600px) {
+        bottom: 0;
+      }
+
+      @include m(portrait) {
+        bottom: 0;
+      }
+
+      &__subtitle {
+        font-family: 'futura-condensed';
+        font-size: 2.2rem;
+        font-weight: 600;
+        white-space: nowrap;
+        position: relative;
+
+        &__newline {
+          @include mq(tablet) {
+            display: none;
+          }
+        }
+
+        &__out {
+          display: none;
+          @include mq(desktop) {
+            display: revert;
+          }
+        }
+      }
+
+      &__svg {
+        width: 6em;
+        height: 6rem;
+        position: absolute;
+        @include absolute-center;
+
+        @include m(portrait) {
+          display: none;
+        }
+
+        &__rect {
+          stroke: white;
+          stroke-width: 2px;
+          fill: none;
+          stroke-dasharray: 10 5;
+          opacity: 0.5;
+        }
+      }
+
+      &__line {
+        flex-grow: 1;
+      }
+
+      &__icon {
+        position: relative;
+
+        &__text {
+          @include m(portrait) {
+            visibility: hidden;
+            margin-left: -50px;
+          }
+        }
+
+        &__arrow {
+          position: absolute;
+          @include absolute-center;
+
+          @include m(portrait) {
+            left: 20%;
+          }
+        }
+      }
+    }
   }
 }

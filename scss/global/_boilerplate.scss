@@ -1,12 +1,12 @@
 @use 'colors';
 
-html, body, button, ul, li, a {
+html, body, button, ul, li, a, h1, h2, h3, h4, h5, h6 {
   all: unset;
   display: revert;
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'futura-medium', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1;
   font-weight: 400;
 

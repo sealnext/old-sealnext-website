@@ -7,8 +7,19 @@ for (let i = 1; i <= 6; i++) {
             let ellipse = this.querySelector('.ellipse');
             let text = this.querySelector('.services__content__info__text');
 
-            if (description) {
+            let exists = false;
+            for (let j = 1; j <= 6; j++) {
+                let otherElement = document.querySelector('.s' + j);
+                let otherDescription = otherElement.querySelector('.services__content__info__description');
+                if (otherElement !== this && otherDescription && otherDescription.classList.contains('expanded')) {
+                    exists = true;
+                    break;
+                }
+            }
+
+            if (description && (!exists || description.classList.contains('expanded'))) {
                 description.classList.toggle('expanded');
+
                 if (description.classList.contains('expanded')) {
                     element.style.backgroundColor = 'rgba(25, 26, 31, 0.5)';
                     ellipse.style.backgroundColor = '#4543EC';

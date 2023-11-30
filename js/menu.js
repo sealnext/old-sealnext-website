@@ -183,7 +183,7 @@ function debounceButtonAction(selector, actionFunction) {
 
             setTimeout(() => {
                 button.classList.remove('debouncing');
-            }, 500);
+            }, 00);
         }
     };
 }

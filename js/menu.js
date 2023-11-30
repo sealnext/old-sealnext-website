@@ -1,4 +1,3 @@
-
 function showMenuSection() {
     const menuSection = document.getElementById('menu');
     const menuSidebar = document.getElementById('menu-desktop-sidebar');
@@ -97,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var contactSection = document.querySelector('#contact');
     var body = document.body;
     const checkbox = document.querySelector('.menu_button__trigger_checkbox');
+    var footerGetStartedButton = document.querySelector('#footer-get-started');
 
     function toggleDisplay(element, displayStyle) {
         element.style.display = displayStyle;
@@ -146,19 +146,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function closeMenu() {
         if (showCode !== 0) {
-            hideMenuSection();
+            toggleDisplay(getStartedButton, "block");
+            body.style.overflow = "auto";
             menuSection.classList.add('animate-remove-blur'); // Adăugăm animația pentru eliminarea blurului
             menuSection.classList.remove('animate-apply-blur');
+            hideMenuSection();
+            checkbox.checked = false;
             showCode = 0;
         }
     }
 
+    footerGetStartedButton.addEventListener('click', handleContactSectionToggle);
     document.querySelector('#portfolio-link').addEventListener('click', closeMenu);
     document.querySelector('#services-link').addEventListener('click', closeMenu);
     document.querySelector('#review-link').addEventListener('click', closeMenu);
     document.querySelector('#blogs-link').addEventListener('click', closeMenu);
-    document.querySelector('.menu_button__trigger_label').addEventListener('click', handleMenuButtonClick);
-    document.querySelector('.getstarted_button__trigger_label').addEventListener('click', handleContactSectionToggle);
+    document.querySelector('.menu_button__trigger_label').addEventListener('click', debounceButtonAction('.menu_button__trigger_label', handleMenuButtonClick));
+    document.querySelector('.getstarted_button__trigger_label').addEventListener('click', debounceButtonAction('.getstarted_button__trigger_label', handleContactSectionToggle));
     document.querySelector('#contact-link').addEventListener('click', function () {
         if (showCode !== 0) {
             hideMenuSection();
@@ -168,3 +172,18 @@ document.addEventListener('DOMContentLoaded', function () {
         showCode = 3;
     });
 });
+
+function debounceButtonAction(selector, actionFunction) {
+    return function (event) {
+        const button = document.querySelector(selector);
+        if (button && !button.classList.contains('debouncing')) {
+            button.classList.add('debouncing');
+
+            actionFunction.call(this, event);
+
+            setTimeout(() => {
+                button.classList.remove('debouncing');
+            }, 500);
+        }
+    };
+}

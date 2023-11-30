@@ -1,0 +1,160 @@
+#main {
+  z-index: 1;
+  position: relative;
+}
+.footer-container {
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+  font-family: "Futura" !important;
+  background-color: #0f0f0f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 20rem;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-section-1 {
+  width: 50%;
+  justify-content: space-between;
+}
+
+.contact-item__circle-warpper {
+  display: flex; /* Acest lucru face ca toate elementele copil să fie pe o singură linie */
+  flex-wrap: nowrap; /* Previne înfășurarea elementelor pe mai multe linii */
+  justify-content: flex-start; /* Aliniază elementele la începutul containerului; poți schimba la 'center' sau 'space-between' pentru aliniere diferită */
+  align-items: center; /* Centrat vertical */
+  gap: 10px; /* Adaugă un spațiu între elemente, ajustează-l după necesități */
+}
+
+.contact-item__circle {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background-color: #9f9f9f47;
+  border-radius: 50%; /* Asigură forma de cerc */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Previne reducerea dimensiunii elementelor */
+}
+
+.footer-section-2 {
+  width: 30%;
+  justify-content: space-between;
+  .contact-item {
+    font-size: 1.1rem;
+  }
+}
+
+.contact-item a {
+  cursor: pointer;
+}
+
+.footer-link {
+  cursor: pointer;
+}
+
+.footer-section-3 {
+  width: 20%;
+  justify-content: space-between;
+}
+
+.footer-section {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  &__logo {
+    margin-right: 1rem;
+    width: 16rem;
+  }
+}
+
+.footer-section__details {
+  display: flex;
+}
+
+#footer-connect-text {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#footer-description {
+  margin: 0;
+  line-height: 1.3rem;
+  color: #bbbbbb;
+}
+
+#footer-email {
+  margin: 0;
+  color: #bbbbbb;
+}
+
+#footer-get-started {
+  background-color: #3d3d3d;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 16px;
+  margin-top: 4px;
+  margin-left: 4px;
+  font-size: 10px;
+  text-shadow: 1px 1px 2px black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#footer-get-started:hover {
+  background-color: #555; /* Slightly lighter grey background on hover */
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* More pronounced shadow on hover */
+}
+
+#footer-direct-chat {
+  color: #bbbbbb;
+  margin: 0;
+}
+
+.footer-links {
+  text-align: left;
+  padding-left: 3rem;
+  p {
+    margin: 0 0 0.7rem 0;
+  }
+  a {
+    margin: 0.7rem 0 0.7rem 0;
+  }
+}
+
+.footer-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  color: #bbbbbb;
+}
+
+.contact-icon {
+  margin-right: 10px;
+}

@@ -11,7 +11,7 @@
   color: white;
   display: flex;
   justify-content: space-between;
-  height: 20rem;
+  min-height: 20rem;
   padding: 20px;
 }
 
@@ -19,6 +19,45 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+// @media (max-width: 1200px) {
+//   .footer-container > .container {
+//     flex-direction: column;
+//     gap: 5rem;
+//     margin-bottom: 1rem;
+//   }
+// }
+
+@media (max-width: 450px) {
+  .footer-container > .container {
+    flex-direction: column;
+    gap: 9rem !important;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .footer-container > .container {
+    flex-direction: column;
+    // gap: 5rem;
+    margin-bottom: 1rem;
+  }
+  .footer-section-3 {
+    display: none !important;
+  }
+  .footer-section-1 {
+    width: 100% !important;
+  }
+  .footer-section-2 {
+    width: 100% !important;
+  }
+  .footer-section {
+    height: 8rem !important;
+  }
+  #footer-direct-chat,
+  #footer-email {
+    display: none !important;
+  }
 }
 
 .footer-section-1 {
@@ -34,16 +73,32 @@
   gap: 10px; /* Adaugă un spațiu între elemente, ajustează-l după necesități */
 }
 
+@media (max-width: 768px) {
+  .footer-section-2 .contact-item__circle-warpper {
+    position: absolute;
+    right: 1rem;
+    bottom: 2rem;
+    flex-direction: column; /* Stivuiește cercurile vertical */
+    align-items: flex-end; /* Aliniază cercurile la dreapta */
+    padding-top: 20px; /* Adaugă spațiu deasupra cercurilor, ajustează după cum este necesar */
+  }
+  /* Restul stilurilor din interogarea media */
+}
+
 .contact-item__circle {
-  cursor: pointer;
-  width: 2rem;
-  height: 2rem;
-  background-color: #9f9f9f47;
-  border-radius: 50%; /* Asigură forma de cerc */
   display: flex;
+  flex-shrink: 0;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(159 159 159 / 86%);
+  border-radius: 100px;
+  color: white;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0; /* Previne reducerea dimensiunii elementelor */
+  img {
+    width: 1.5rem;
+  }
 }
 
 .footer-section-2 {

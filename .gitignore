@@ -29,3 +29,4 @@ dist-ssr
 *.sass.map
 *.scss.map
 *.css
+.vercel

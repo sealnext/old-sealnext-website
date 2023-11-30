@@ -1,11 +1,13 @@
+@import '../shared/variables';
+
 .services {
   &__left {
     position: absolute;
-    padding-top: 10vh;
+    padding-top: 10svh;
 
     &__container {
       float: left;
-      padding-top: 8vh;
+      padding-top: 8svh;
     }
 
     &__text {
@@ -22,7 +24,7 @@
   @media (max-width: 600px) {
     &__left {
       &__container {
-        padding-top: 8vh;
+        padding-top: 8svh;
       }
 
       &__text {
@@ -42,11 +44,11 @@
 
     &__container {
       position: relative;
-      padding-top: 6vh;
+      padding-top: 6svh;
       @media (max-width: 600px) {
-        padding-top: 8vh;
+        padding-top: 8svh;
       }
-      margin-left: 12vh;
+      margin-left: 12svh;
       display: flex;
       align-items: center;
       text-align: left;
@@ -55,7 +57,7 @@
 
   &__content {
     &__container {
-      padding-top: 6vh;
+      padding-top: 6svh;
     }
 
     &__info {
@@ -63,8 +65,8 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      padding-left: 5vh;
-      padding-right: 5vh;
+      padding-left: 5svh;
+      padding-right: 5svh;
 
       &__left {
         flex: 1;
@@ -162,10 +164,14 @@
     lighten;
   background-clip: border-box;
   max-height: 1440px;
-  height: 130vh;
+  height: 42rem;
   max-width: 1800px;
   margin: 0 auto;
   position: relative;
+
+  @include mq(tablet) {
+    height: 60rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -173,18 +179,18 @@
     background-image: url("/services/cube_s2.svg"),
       url("/services/cube_s7.webp");
     background-repeat: no-repeat, no-repeat;
-    background-position: -15vh 25%, 10% 70vh;
+    background-position: -15svh 25%, 10% 70svh;
     background-blend-mode: lighten, lighten;
   }
 }
 
 @media (max-height: 600px) and (orientation: landscape) {
   .view-4 {
-    height: 200vh;
+    height: 200svh;
     background-image: url("/services/cube_s2.svg"),
       url("/services/cube_s7.webp");
     background-repeat: no-repeat, no-repeat;
-    background-position: 20vh 80vh, -30vh 0vh;
+    background-position: 20svh 80svh, -30svh 0svh;
     background-blend-mode: lighten, lighten;
     width: 100vw;
   }

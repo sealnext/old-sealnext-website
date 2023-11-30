@@ -38,19 +38,19 @@
 .bottom-left,
 .bottom-right {
   position: absolute;
-  top: 95vh;
+  top: 95svh;
   text-align: right;
 }
 
 .top-left {
   @media (max-width: 600px) {
-    top: 70vh;
+    top: 70svh;
   }
 }
 
 .top-right {
   @media (max-width: 600px) {
-    top: 60vh;
+    top: 60svh;
   }
 }
 
@@ -76,16 +76,16 @@
 }
 
 .bottom-left {
-  top: 175vh;
+  top: 175svh;
   @media (max-width: 600px) {
-    top: 160vh;
+    top: 160svh;
   }
 }
 
 .bottom-right {
-  top: 185vh;
+  top: 185svh;
   @media (max-width: 600px) {
-    top: 145vh;
+    top: 145svh;
   }
 }
 

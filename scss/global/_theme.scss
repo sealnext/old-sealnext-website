@@ -1,5 +1,9 @@
 @use "colors";
 
+#main {
+  background-color: hsl(200, 100%, 1%);
+}
+
 .dark-theme {
   color: colors.$white-font-color;
   background-color: colors.$dark-background-color;
@@ -17,36 +21,36 @@
 }
 
 @font-face {
-  font-family: 'spaceland';
-  src: url('/fonts/Spaceland-Ten.otf') format('opentype');
+  font-family: "spaceland";
+  src: url("/fonts/Spaceland-Ten.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'free-sans-bold';
-  src: url('/fonts/FreeSansBold.otf') format('opentype');
+  font-family: "free-sans-bold";
+  src: url("/fonts/FreeSansBold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'futura-medium';
-  src: url('/fonts/Futura Medium.ttf') format('truetype');
+  font-family: "futura-medium";
+  src: url("/fonts/Futura Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'futura-bold';
-  src: url('/fonts/Futura Medium.ttf') format('truetype');
+  font-family: "futura-bold";
+  src: url("/fonts/Futura Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'futura-condensed';
-  src: url('/fonts/Futura Condensed Medium.otf') format('opentype');
+  font-family: "futura-condensed";
+  src: url("/fonts/Futura Condensed Medium.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }

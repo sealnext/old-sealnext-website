@@ -1,35 +1,44 @@
-@import '../shared/variables';
+@import "../shared/variables";
 
 .services {
+  &__header {
+    display: flex;
+    padding-top: 30px;
+    align-items: center;
+  }
   &__left {
     position: absolute;
     padding-top: 10svh;
 
     &__container {
       float: left;
-      padding-top: 8svh;
     }
 
     &__text {
+      position: absolute;
+      top: 50px;
       font-family: "Futura";
-      font-size: 1rem;
-      padding-left: 1vw;
+      font-size: 1.1rem;
     }
 
     &__line {
-      width: 21vw;
+      width: 20vw;
+    }
+
+    @media (min-width: 1120px) {
+      &__line {
+        width: 224px;
+      }
     }
   }
 
   @media (max-width: 600px) {
     &__left {
-      &__container {
-        padding-top: 8svh;
-      }
-
       &__text {
-        font-size: 0.8rem;
-        padding-left: 5px;
+        font-size: 1rem;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
       }
     }
   }
@@ -44,11 +53,6 @@
 
     &__container {
       position: relative;
-      padding-top: 6svh;
-      @media (max-width: 600px) {
-        padding-top: 8svh;
-      }
-      margin-left: 12svh;
       display: flex;
       align-items: center;
       text-align: left;
@@ -153,15 +157,11 @@
 
 .view-4 {
   background-image: url("/services/cube_s1.svg"), url("/services/cube_s2.svg"),
-    url("/services/cube_s3.svg"), url("/services/cube_s7.webp"),
-    url("/services/cube_s4.svg"), url("/services/cube_s5.svg"),
+    url("/services/cube_s3.svg"), url("/services/cube_s5.svg"),
     url("/services/cube_s6.svg");
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
-    no-repeat, no-repeat;
-  background-position: 0% 120%, 25% 50%, 50% 0%, 15% 0%, 60% 60%, 100% 10%,
-    90% 90%;
-  background-blend-mode: lighten, lighten, lighten, lighten, lighten, lighten,
-    lighten;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 0% 120%, -5% 10%, 50% 100%, 100% 10%, 90% 97%;
+  background-blend-mode: lighten;
   background-clip: border-box;
   max-height: 1440px;
   height: 42rem;
@@ -176,11 +176,10 @@
 
 @media (max-width: 600px) {
   .view-4 {
-    background-image: url("/services/cube_s2.svg"),
-      url("/services/cube_s7.webp");
+    background-image: url("/services/cube_s2.svg"), url("/services/cube_s3.svg");
     background-repeat: no-repeat, no-repeat;
-    background-position: -15svh 25%, 10% 70svh;
-    background-blend-mode: lighten, lighten;
+    background-position: -15svh 25%, 30% 60svh;
+    background-blend-mode: lighten;
   }
 }
 
@@ -188,10 +187,10 @@
   .view-4 {
     height: 200svh;
     background-image: url("/services/cube_s2.svg"),
-      url("/services/cube_s7.webp");
-    background-repeat: no-repeat, no-repeat;
-    background-position: 20svh 80svh, -30svh 0svh;
-    background-blend-mode: lighten, lighten;
+      url("/services/cube_s7.webp"), url("/services/cube_s3.svg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 20svh 80svh, -30svh 0svh, 80svh 15svh;
+    background-blend-mode: lighten;
     width: 100vw;
   }
 }

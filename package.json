@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build",
+    "build": "sass scss/:css/ && vite build && cp -R js dist",
     "preview": "vite preview",
     "sass": "sass scss/:css/ --watch"
   },

@@ -9,7 +9,7 @@
 // centered container which doesn't exceed 1120px
 .container {
   width: calc(100% - 32px); // 16px margin minimum
-  max-width: $container-width;
+  max-width: 1120px;
   margin: 0 auto;
 }
 

@@ -404,7 +404,7 @@ input[type="checkbox"] {
   position: relative;
 }
 
-@include mq(desktop) {
+@include mq(tablet) {
   ul.custom-list li {
     display: flex;
     align-items: center;

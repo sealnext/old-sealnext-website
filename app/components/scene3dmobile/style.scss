@@ -1,0 +1,72 @@
+.scene3d_mobile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__title {
+    font-family: "Spaceland", sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    line-height: 2.5rem;
+    padding: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__subtitle {
+    width: 100%;
+
+    font-family: "Futura", sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+@keyframes bounce-animation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes reverse-bounce-animation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}

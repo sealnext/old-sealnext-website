@@ -1,16 +1,32 @@
 {
-  "name": "vite-sealnext",
+  "name": "sealnext",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite --host",
-    "build": "sass scss/:css/ && vite build && cp -R js dist",
-    "preview": "vite preview",
-    "sass": "sass scss/:css/ --watch"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.105.1",
+    "@react-three/fiber": "^8.16.3",
+    "framer-motion": "^11.0.24",
+    "framer-motion-3d": "^11.0.25",
+    "leva": "^0.9.35",
+    "lodash": "^4.17.21",
+    "next": "14.1.4",
+    "ogl": "^1.0.6",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.72.0",
+    "three": "^0.164.1"
   },
   "devDependencies": {
-    "sass": "^1.69.5",
-    "vite": "^4.4.5"
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
   }
 }

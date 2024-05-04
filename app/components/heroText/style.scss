@@ -1,0 +1,12 @@
+.heroText {
+  font-size: clamp(4.5em, 6vw + 2em, 7em);
+  font-family: "Spaceland";
+  letter-spacing: 0em;
+  line-height: 0.9em;
+  color: white;
+}
+
+.heroDiv {
+  display: flex;
+  align-items: center;
+}
